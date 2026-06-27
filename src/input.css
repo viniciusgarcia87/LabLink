@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant sidebar-off (&:where(.sidebar-off, .sidebar-off *));
 
 @theme {
     --color-vermelho_1: #e63946ff;
@@ -9,5 +10,7 @@
     --color-azul_1: #a8dadcff;
     --color-azul_2: #457b9dff;
     --color-azul_3: #1d3557ff;
-    --color-fundo_escuro: #001d3d
+    --color-fundo_escuro: #001d3d;
+
+    --spacing-sidebar: 2.5rem;
 }

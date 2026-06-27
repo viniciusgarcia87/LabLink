@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<!-- Opcoes: dark sidebar-off -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabLink</title>
+
+    <!-- Font Awesome -->
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/output.css">
+
+</head>
+
+<body
+    class="flex h-screen w-screen overflow-hidden bg-fundo_claro dark:bg-fundo_escuro text-azul-2 dark:text-fundo_claro">
+    <!-- Sidebar -->
+    <aside
+        class="flex flex-col w-32 h-dvh shrink-0 px-3 border-r border-r-azul_1 dark:border-r-azul_2 sidebar-off:w-sidebar sidebar-off:items-center">
+        <div class="flex justify-between">
+            <a href="" class="flex items-center h-sidebar hover:scale-105 sidebar-off:hidden">
+                <i class="fa-solid fa-flask fa-sm align-middle"></i>
+                <h1 class="text-sm font-semibold">LabLink</h1>
+            </a>
+            <a href="" class="flex items-center h-sidebar">
+                <i class="fa-solid fa-play flex fa-2xs items-center rotate-180 sidebar-off:rotate-0"></i>
+            </a>
+        </div>
+        <ul class="flex flex-col mt-5 text-xs">
+            <li class="py-1.5 hover:scale-105 cursor-pointer"><a href=""></a><i class="fa-solid fa-box-archive"></i><span class="sidebar-off:hidden">
+                    Estoque MP's</span></a></li>
+            <li class="py-1.5 hover:scale-105 cursor-pointer"><a href=""></a><i class="fa-solid fa-bars-progress"></i><span class="sidebar-off:hidden">
+                    Projetos</span class="sidebar-off:hidden"></a></li>
+            <ul class="pl-3 sidebar-off:pl-0">
+                <li class="py-1.5 hover:scale-105 cursor-pointer"><a href=""></a><i class="fa-solid fa-circle-info"></i><span
+                        class="sidebar-off:hidden"> Informações</span></a></li>
+                <li class="py-1.5 hover:scale-105 cursor-pointer"><a href=""></a><i class="fa-solid fa-diagram-project"></i><span
+                        class="sidebar-off:hidden"> Fórmulas</span class="sidebar-off:hidden"></a></li>
+                <li class="py-1.5 hover:scale-105 cursor-pointer"><a href=""></a><i class="fa-solid fa-sitemap"></i><span class="sidebar-off:hidden">
+                        Análises</span></a></li>
+                <li class="py-1.5 hover:scale-105 cursor-pointer"><a href=""></a><i class="fa-regular fa-folder"></i><span class="sidebar-off:hidden">
+                        Documentos</span></a></li>
+            </ul>
+        </ul>
+    </aside>
+    <!-- Restante da página -->
+    <div class="flex-1 flex flex-col min-w-0">
+        <!-- Cabecalho, com searchbar e ícone das 3 linhas -->
+        <header class="flex shrink-0 justify-between items-center px-3 h-sidebar border-b border-b-azul_1 dark:border-b-azul_2">
+            <!-- Searchbar -->
+            <search class="flex items-center flex-1 max-w-60 h-8 rounded-2xl">
+                <input type="search"
+                    class=" w-full h-6.5 pl-3 text-sm text-azul_3 dark:text-fundo_escuro border-2 rounded-full focus:ring-2 bg-azul_1 dark:bg-fundo_claro border-azul_2 dark:border-azul_1"
+                    placeholder="Busca">
+            </search>
+            <!-- Icones canto direito -->
+            <div>
+                <ul class="flex items-center fa-xl px-5">
+                    <li><a href="" ><i class="fa-regular fa-circle-question mx-1 hover:scale-105 fa-sm"></i></a></li>
+                    <li><a href="" ><i class="fa-regular fa-bell mx-1 hover:scale-105 fa-sm"></i></a></li>
+                    <li><a href="" ><i class="fa-solid fa-circle-user mx-1 hover:scale-105 fa-sm"></i></a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Principais informações -->
+        <main class="flex flex-1 min-h-0 min-w-0 items-start rounded m-2 bg-fundo_claro dark:bg-azul_3">
+            <table>
+                <thead class="text-xs font-thin">
+                    <th class="w-15 border-r border-l p-2 wrap-anywhere">ID</th>
+                    <th class="w-21 border-r border-l p-2 wrap-anywhere">Cód. SAP</th>
+                    <th class="w-21 border-r border-l p-2 wrap-anywhere">Cód. Fornecedor</th>
+                    <th class="w-60 border-r border-l p-2 wrap-anywhere">Descrição</th>
+                    <th class="w-30 border-r border-l p-2 wrap-anywhere">Qtdd Lab</th>
+                </thead>
+
+
+
+            </table>
+        </main>
+    </div>
+</body>
+
+</html>
