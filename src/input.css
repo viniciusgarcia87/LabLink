@@ -1,0 +1,13 @@
+@import url("https://googleapis.com");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-vermelho_1: #e63946ff;
+    --color-fundo_claro: #f1faeeff;
+    --color-azul_1: #a8dadcff;
+    --color-azul_2: #457b9dff;
+    --color-azul_3: #1d3557ff;
+    --color-fundo_escuro: #001d3d
+}
