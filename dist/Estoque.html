@@ -22,7 +22,7 @@
     class="flex h-screen w-screen overflow-hidden bg-fundo_claro dark:bg-fundo_escuro text-azul-2 text-azul_3 dark:text-fundo_claro">
     <!-- Sidebar -->
     <aside
-        class="flex flex-col w-32 h-dvh shrink-0 px-3 border-r border-r-azul_1 dark:border-r-azul_2 sidebar-off:w-sidebar sidebar-off:items-center">
+        class="flex flex-col w-32 h-screen shrink-0 px-3 border-r border-r-azul_1 dark:border-r-azul_2 sidebar-off:w-sidebar sidebar-off:items-center">
         <div class="flex justify-between">
             <a href="" class="flex items-center h-sidebar hover:scale-105 sidebar-off:hidden">
                 <i class="fa-solid fa-flask fa-sm align-middle"></i>
@@ -68,7 +68,7 @@
         </ul>
     </aside>
     <!-- Restante da página -->
-    <div class="flex-1 flex flex-col min-w-0">
+    <div class="flex flex-1 flex-col min-w-0 h-full overflow-hidden">
         <!-- Cabecalho, com searchbar e ícone das 3 linhas -->
         <header
             class="flex shrink-0 justify-between items-center px-3 h-sidebar border-b border-b-azul_1 dark:border-b-azul_2">
@@ -101,164 +101,254 @@
         </header>
 
         <!-- Principais informações -->
-        <main class="min-h-0 min-w-0 rounded m-2 bg-fundo_claro dark:bg-azul_3 text-azul_3 dark:text-fundo_claro ">
-            <div class="w-full">
-                <table class="w-full table-fixed text-xs font-thin wrap-anywhere">
-                    <thead class="">
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <th class="w-[6%] p-2 ">ID</th>
-                            <th class="w-[12%] p-2 ">Cód. SAP</th>
-                            <th class="w-[12%] p-2 ">Cód. Fornecedor</th>
-                            <th class="w-[30%] p-2 ">Descrição</th>
-                            <th class="w-[10%] p-2 ">Lote</th>
-                            <th class="w-[10%] p-2 ">Quantidade Laboratório</th>
-                            <th class="w-[10%] p-2 ">Quantidade Reservado</th>
-                            <th class="w-[10%] p-2 ">Quantidade Livre</th>
-                        </tr>
-                    </thead>
-                    <tbody class="">
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910 Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910 Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910 Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910 Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910 Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910 Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910 Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                        <tr class="text-center border border-azul_2 divide-x divide-solid divide-azul_2">
-                            <td>123456</td>
-                            <td>123456</td>
-                            <td>1234567891011</td>
-                            <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                            <td>123456789</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                            <td>125464 g</td> 
-                        </tr>
-                    </tbody>
-                </table>
+        <main class="flex flex-col flex-1 min-h-0 min-w-0 m-2 overflow-hidden">
+            <div class="flex flex-col flex-1 min-h-0 border-2 rounded-tl-xl rounded-bl-xl border-azul_2 overflow-hidden">
+                <div class="w-full h-full overflow-y-auto bg-fundo_claro dark:bg-azul_3 text-azul_3 dark:text-fundo_claro pr-[0.75]">
+                    <table class="w-full table-fixed text-[0.7rem] font-thin wrap-anywhere border-collapse border-r-3 border-azul_2">
+                        <thead
+                            class="sticky top-0 z-10 bg-fundo_claro dark:bg-azul_3 shadow-[inset_0_-2px_0_0_theme(colors.azul_2)]">
+                            <tr class="text-center divide-x divide-solid divide-azul_2">
+                                <th class="w-[6%] p-2">ID</th>
+                                <th class="w-[12%] p-2">Cód. SAP</th>
+                                <th class="w-[12%] p-2">Cód. Fornecedor</th>
+                                <th class="w-[28%] p-2">Descrição</th>
+                                <th class="w-[8%] p-2">Lote</th>
+                                <th class="w-[8%] p-2">Quantidade Laboratório</th>
+                                <th class="w-[8%] p-2">Quantidade Reservado</th>
+                                <th class="w-[8%] p-2">Quantidade Livre</th>
+                                <th class="w-[5%] p-2">Alterar qtdd</th>
+                                <th class="w-[5%] p-2">Dar Baixa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone</a></td>
+                                <td><a href="">Icone</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href="">Icone1</a></td>
+                                <td><a href="">Icone2</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </main>
     </div>
