@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LabLink</title>
 
-    <!-- Font Awesome -->
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -43,41 +42,43 @@
                     <i class="fa-solid fa-bars-progress"></i><span class="sidebar-off:hidden">Projetos</span>
                 </a>
             </li>
-            <ul class="pl-3 sidebar-off:pl-0">
-                <li class="py-1.5 hover:scale-105 cursor-pointer">
-                    <a href="">
-                        <i class="fa-solid fa-circle-info"></i><span class="sidebar-off:hidden">Informações</span>
-                    </a>
-                </li>
-                <li class="py-1.5 hover:scale-105 cursor-pointer">
-                    <a href="">
-                        <i class="fa-solid fa-diagram-project"></i><span class="sidebar-off:hidden">Fórmulas</span>
-                    </a>
-                </li>
-                <li class="py-1.5 hover:scale-105 cursor-pointer">
-                    <a href="">
-                        <i class="fa-solid fa-sitemap"></i><span class="sidebar-off:hidden">Análises</span>
-                    </a>
-                </li>
-                <li class="py-1.5 hover:scale-105 cursor-pointer">
-                    <a href="">
-                        <i class="fa-regular fa-folder"></i><span class="sidebar-off:hidden">Documentos</span>
-                    </a>
-                </li>
-            </ul>
+            <li>
+                <ul class="pl-3 sidebar-off:pl-0">
+                    <li class="py-1.5 hover:scale-105 cursor-pointer">
+                        <a href="">
+                            <i class="fa-solid fa-circle-info"></i><span class="sidebar-off:hidden">Informações</span>
+                        </a>
+                    </li>
+                    <li class="py-1.5 hover:scale-105 cursor-pointer">
+                        <a href="">
+                            <i class="fa-solid fa-diagram-project"></i><span class="sidebar-off:hidden">Fórmulas</span>
+                        </a>
+                    </li>
+                    <li class="py-1.5 hover:scale-105 cursor-pointer">
+                        <a href="">
+                            <i class="fa-solid fa-sitemap"></i><span class="sidebar-off:hidden">Análises</span>
+                        </a>
+                    </li>
+                    <li class="py-1.5 hover:scale-105 cursor-pointer">
+                        <a href="">
+                            <i class="fa-regular fa-folder"></i><span class="sidebar-off:hidden">Documentos</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </aside>
     <!-- Restante da página -->
     <div class="flex flex-1 flex-col min-w-0 h-full overflow-hidden">
         <!-- Cabecalho, com searchbar e ícone das 3 linhas -->
         <header
-            class="flex shrink-0 justify-between items-center px-3 h-sidebar border-b border-b-azul_1 dark:border-b-azul_2">
+            class="site-header flex shrink-0 justify-between items-center px-3 h-sidebar border-b border-b-azul_1 dark:border-b-azul_2">
             <!-- Searchbar -->
-            <search class="flex items-center flex-1 max-w-60 h-8 rounded-2xl">
-                <input type="search"
-                    class=" w-full h-6.5 pl-3 text-sm text-azul_3 dark:text-fundo_escuro border-2 rounded-full focus:ring-2 bg-azul_1 dark:bg-fundo_claro border-azul_2 dark:border-azul_1"
+            <div role="search" class="flex items-center flex-1 min-w-0 h-8 rounded-2xl">
+                <input id="search-bar-header" type="search"
+                    class="w-[50%] h-6.5 pl-3 text-sm text-azul_3 dark:text-fundo_escuro border-2 rounded-full focus:ring-2 bg-azul_1 dark:bg-fundo_claro border-azul_2 dark:border-azul_1"
                     placeholder="Busca">
-            </search>
+            </div>
             <!-- Icones canto direito -->
             <div>
                 <ul class="flex items-center fa-xl px-5">
@@ -101,23 +102,28 @@
         </header>
 
         <!-- Principais informações -->
-        <main class="flex flex-col flex-1 min-h-0 min-w-0 m-2 overflow-hidden">
-            <div class="flex flex-col flex-1 min-h-0 border-2 rounded-tl-xl rounded-bl-xl border-azul_2 overflow-hidden">
-                <div class="w-full h-full overflow-y-auto bg-fundo_claro dark:bg-azul_3 text-azul_3 dark:text-fundo_claro pr-[0.75]">
-                    <table class="w-full table-fixed text-[0.7rem] font-thin wrap-anywhere border-collapse border-r-3 border-azul_2">
+        <main class="flex flex-col flex-1 min-h-0 min-w-0 mb-2 mx-2 overflow-hidden">
+            <header class="content-header flex shrink-0 h-8 my-1 items-center justify-between">
+                <div class="items-center"><i class="fa-solid fa-box-archive"></i><span class="items-center text-base pl-2 font-semibold">Estoque MP's</span></div>
+                <a href="" class="w-40 h-7 mr-4 flex justify-center items-center bg-azul_2 rounded-full"><i class="fa-solid fa-plus text-white"></i><span class="text-white font-semibold pl-2">Adicionar MP</span></a>
+            </header>
+
+            <div class="flex flex-col flex-1 min-h-0  overflow-hidden">
+                <div class="w-full h-full overflow-y-auto rounded-tl-xl rounded-bl-xl border-2 border-azul_2 bg-fundo_claro dark:bg-azul_3 text-azul_3 dark:text-fundo_claro ">
+                    <table class="w-full table-fixed text-[0.7rem] font-thin wrap-anywhere border-collapse">
                         <thead
-                            class="sticky top-0 z-10 bg-fundo_claro dark:bg-azul_3 shadow-[inset_0_-2px_0_0_theme(colors.azul_2)]">
+                            class="sticky top-0 z-10 bg-fundo_claro dark:bg-azul_3 shadow-[inset_0_-2px_0_0_theme(colors.azul_2)] ">
                             <tr class="text-center divide-x divide-solid divide-azul_2">
                                 <th class="w-[6%] p-2">ID</th>
-                                <th class="w-[12%] p-2">Cód. SAP</th>
-                                <th class="w-[12%] p-2">Cód. Fornecedor</th>
-                                <th class="w-[28%] p-2">Descrição</th>
+                                <th class="w-[8%] p-2">Cód. SAP</th>
+                                <th class="w-[8%] p-2">Cód. Fornecedor</th>
+                                <th class="w-[34%] p-2">Descrição</th>
                                 <th class="w-[8%] p-2">Lote</th>
                                 <th class="w-[8%] p-2">Quantidade Laboratório</th>
                                 <th class="w-[8%] p-2">Quantidade Reservado</th>
                                 <th class="w-[8%] p-2">Quantidade Livre</th>
-                                <th class="w-[5%] p-2">Alterar qtdd</th>
-                                <th class="w-[5%] p-2">Dar Baixa</th>
+                                <th class="w-[6%] p-2">Alterar Qtdd.</th>
+                                <th class="w-[6%] p-2">Mais Info.</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -131,8 +137,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -143,8 +149,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -156,8 +162,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -168,8 +174,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -181,8 +187,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -193,8 +199,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -206,20 +212,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
-                            </tr>
-                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
-                                <td>123456</td>
-                                <td>123456</td>
-                                <td>1234567891011</td>
-                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                                <td>123456789</td>
-                                <td>125464 g</td>
-                                <td>125464 g</td>
-                                <td>125464 g</td>
-                                <td><a href="">Icone</a></td>
-                                <td><a href="">Icone</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -231,8 +225,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -243,8 +237,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -256,20 +250,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
-                            </tr>
-                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
-                                <td>123456</td>
-                                <td>123456</td>
-                                <td>1234567891011</td>
-                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                                <td>123456789</td>
-                                <td>125464 g</td>
-                                <td>125464 g</td>
-                                <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -281,8 +263,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -293,8 +275,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -306,20 +288,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
-                            </tr>
-                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
-                                <td>123456</td>
-                                <td>123456</td>
-                                <td>1234567891011</td>
-                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
-                                <td>123456789</td>
-                                <td>125464 g</td>
-                                <td>125464 g</td>
-                                <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -331,8 +301,8 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                             <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
                                 <td>123456</td>
@@ -343,8 +313,59 @@
                                 <td>125464 g</td>
                                 <td>125464 g</td>
                                 <td>125464 g</td>
-                                <td><a href="">Icone1</a></td>
-                                <td><a href="">Icone2</a></td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
+                            </tr>
+                            <tr class="text-center border-y border-azul_2 divide-x divide-solid divide-azul_2">
+                                <td>123456</td>
+                                <td>123456</td>
+                                <td>1234567891011</td>
+                                <td class="text-left">Teste Teste12345678910 Teste Teste Teste Teste12345678910
+                                    Teste12345678910 Teste12345678910 Teste12345678910</td>
+                                <td>123456789</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td>125464 g</td>
+                                <td><a href=""><i class="fa-solid fa-cart-flatbed"></i></a></td>
+                                <td><a href=""><i class="fa-solid fa-eye"></i></a></td>
                             </tr>
                         </tbody>
                     </table>
